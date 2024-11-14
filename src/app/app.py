@@ -12,7 +12,7 @@ class App:
         return a*b
 
     def division(a,b):
-        return a/b
+        return 0
 
     # 1. Verifica si una lista contiene un número primo
     def contiene_numero_primo(lista):
