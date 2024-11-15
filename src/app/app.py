@@ -106,12 +106,17 @@ class App:
         return sum(1 for char in cadena.lower() if char in "aeiou")
 
     # 9. Encuentra el segundo número mayor en una lista
+    @staticmethod
     def segundo_mayor(lista):
         """
         Encuentra y retorna el segundo número más grande en la lista.
         Si no existe, retorna None.
         """
-        pass
+        unicos = list(set(lista))
+        if len(unicos) < 2:
+            return None
+        unicos.sort(reverse=True)
+        return unicos[1]
 
     # 10. Calcula la serie de Fibonacci hasta n términos
     def fibonacci(n):
