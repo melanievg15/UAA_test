@@ -78,12 +78,13 @@ class App:
         return sum([x for x in range(1, 2 * n, 2)])
 
     # 6. Verifica si todos los elementos de una lista son únicos
+    @staticmethod
     def elementos_unicos(lista):
         """
         Verifica si todos los elementos de la lista son únicos.
         Retorna True si son únicos, de lo contrario, False.
         """
-        pass
+        return len(lista) == len(set(lista))
 
     # 7. Calcula el factorial de un número sin usar recursión
     def calcular_factorial(numero):
