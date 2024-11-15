@@ -98,11 +98,12 @@ class App:
         return resultado
 
     # 8. Cuenta la cantidad de vocales en una cadena
+    @staticmethod
     def contar_vocales(cadena):
         """
         Cuenta y retorna la cantidad de vocales en la cadena.
         """
-        pass
+        return sum(1 for char in cadena.lower() if char in "aeiou")
 
     # 9. Encuentra el segundo número mayor en una lista
     def segundo_mayor(lista):
