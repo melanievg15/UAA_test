@@ -60,13 +60,14 @@ class App:
         multiplos = [x for x in lista if x % multiplo == 0]
         return max(multiplos) if multiplos else None
 
-    # 4. Verifica si una palabra es palíndroma (se lee igual en ambos sentidos)
+   # 4. Verifica si una palabra es palíndroma (se lee igual en ambos sentidos)
+    @staticmethod
     def es_palindromo(palabra):
         """
         Verifica si la palabra es un palíndromo (igual al leerla al revés).
         Retorna True si es palíndromo, de lo contrario, False.
         """
-        pass
+        return palabra == palabra[::-1]
 
     # 5. Calcula la suma de los primeros n números impares
     def suma_primeros_impares(n):
