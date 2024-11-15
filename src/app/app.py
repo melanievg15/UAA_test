@@ -41,12 +41,14 @@ class App:
         return False
 
     # 2. Cuenta los números pares en un rango dado
+    @staticmethod
     def contar_pares(inicio, fin):
         """
         Cuenta la cantidad de números pares en el rango desde 'inicio' hasta 'fin' (inclusive).
         Retorna la cantidad de números pares.
         """
-        pass
+        return len([x for x in range(inicio, fin + 1) if x % 2 == 0])
+
 
     # 3. Encuentra el número máximo en una lista que sea múltiplo de un valor dado
     def maximo_multiplo(lista, multiplo):
