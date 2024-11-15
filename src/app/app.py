@@ -70,11 +70,12 @@ class App:
         return palabra == palabra[::-1]
 
     # 5. Calcula la suma de los primeros n números impares
+    @staticmethod
     def suma_primeros_impares(n):
         """
         Calcula y retorna la suma de los primeros 'n' números impares.
         """
-        pass
+        return sum([x for x in range(1, 2 * n, 2)])
 
     # 6. Verifica si todos los elementos de una lista son únicos
     def elementos_unicos(lista):
