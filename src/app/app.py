@@ -2,25 +2,43 @@ from __future__ import absolute_import
 
 class App:
     @staticmethod
-    def add(a,b):
-        return a+b
+    def add(a, b):
+        return a + b
 
-    def resta(a,b):
-        return a-b
+    @staticmethod
+    def resta(a, b):
+        return a - b
 
-    def multiplicacion(a,b):
-        return a*b
+    @staticmethod
+    def multiplicacion(a, b):
+        return a * b
 
-    def division(a,b):
-        return a/b
+    @staticmethod
+    def division(a, b):
+        if b != 0:
+            return a / b
+        else:
+            return "Error: División por cero"
 
     # 1. Verifica si una lista contiene un número primo
+    @staticmethod
     def contiene_numero_primo(lista):
         """
         Verifica si hay al menos un número primo en la lista.
         Retorna True si hay un número primo, de lo contrario, False.
         """
-        pass
+        def es_primo(n):
+            if n < 2:
+                return False
+            for i in range(2, int(n**0.5) + 1):
+                if n % i == 0:
+                    return False
+            return True
+        
+        for num in lista:
+            if es_primo(num):
+                return True
+        return False
 
     # 2. Cuenta los números pares en un rango dado
     def contar_pares(inicio, fin):
