@@ -87,11 +87,15 @@ class App:
         return len(lista) == len(set(lista))
 
     # 7. Calcula el factorial de un número sin usar recursión
+    @staticmethod
     def calcular_factorial(numero):
         """
         Calcula y retorna el factorial de 'numero' usando un ciclo.
         """
-        pass
+        resultado = 1
+        for i in range(2, numero + 1):
+            resultado *= i
+        return resultado
 
     # 8. Cuenta la cantidad de vocales en una cadena
     def contar_vocales(cadena):
